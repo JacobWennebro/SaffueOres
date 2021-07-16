@@ -1,0 +1,20 @@
+# In what worlds should this apply?
+allowed-worlds:
+  - world
+  - world2
+
+# Should blocks drop an item?
+block_drops: false
+
+# How many credits (vault) should each block give the player?
+blocks:
+  COAL_ORE: 1
+  IRON_ORE: 2
+  COPPER_ORE: 3
+  LAPIS_ORE: 4
+  GOLD_ORE: 5
+  REDSTONE_ORE: 6
+  DIAMOND_ORE: 7
+  EMERALD_ORE: 8
+  NETHER_QUARTZ_ORE: 9
+  ANCIENT_DEBRIS: 10

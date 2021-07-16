@@ -1,0 +1,9 @@
+name: SaffueOres
+version: ${project.version}
+main: com.wennebro.saffueores.SaffueOres
+api-version: 1.17
+authors: [ Jacob ]
+depend:
+  - Vault
+softdepend:
+  - ActionBarAPI
