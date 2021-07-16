@@ -20,10 +20,6 @@ public class BlockBreak implements Listener {
     private final Economy econ = SaffueOres.getEconomy();
     private Plugin plugin = null;
 
-    private String[] allowedWorlds = {
-            "world"
-    };
-
     public BlockBreak(Plugin plugin) {
         this.plugin = plugin;
     }
@@ -31,12 +27,12 @@ public class BlockBreak implements Listener {
     @EventHandler
     public void blockBreak(BlockBreakEvent e) {
         Player p = e.getPlayer();
+        FileConfiguration c = plugin.getConfig();
 
         // Check if the player's current world is included in the allowed list.
-        if(!Arrays.asList(allowedWorlds).contains(p.getWorld().getName())) return;
+        if(!c.getList("allowed-worlds").contains(p.getWorld().getName())) return;
 
         Block b = e.getBlock();
-        FileConfiguration c = plugin.getConfig();
 
         if(c.contains("blocks."+ b.getType())) {
             int blockValue = c.getInt("blocks."+ b.getType());
